@@ -1,0 +1,9 @@
+export { default as AppTasks } from './AppTasks';
+export { default as AppNewsUpdate } from './AppNewsUpdate';
+export { default as PaymentTypesWidget } from './PaymentTypesWidget';
+export { default as AppOrderTimeline } from './AppOrderTimeline';
+export { default as AppTrafficBySite } from './AppTrafficBySite';
+export { default as TimePeriodProgress } from './TimePeriodProgress';
+export { default as AppWidgetSummary } from './AppWidgetSummary';
+export { default as ClientInterestsWidget } from './ClientInterestsWidget';
+export { default as TopProductsWidget } from './TopProductsWidget';
