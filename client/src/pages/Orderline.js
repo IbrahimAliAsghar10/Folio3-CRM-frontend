@@ -29,8 +29,6 @@ import Iconify from '../components/Iconify';
 import SearchNotFound from '../components/SearchNotFound';
 import { UserListHead } from '../sections/@dashboard/frequentComponents';
 
-// mock
-// import USERLIST from '../_mock/orderline';
 
 // ----------------------------------------------------------------------
 
