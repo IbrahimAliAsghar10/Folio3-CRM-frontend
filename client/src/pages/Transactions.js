@@ -77,11 +77,11 @@ export default function Transactions() {
   const [Title, setTitle] = useState('');
 
   const [TABLE_HEAD, setTableHead] = useState([]);
-
+  const [flag, setFlag] = useState(0);
   
   const TABLE_HEADHOST = [
-    { id: 'ClientName', label: 'Client Name', alignRight: false },  
-    { id: 'Name', label: 'Order', alignRight: false },  
+    { id: 'Name', label: 'Client Name', alignRight: false },  
+    { id: 'ClientName', label: 'Order', alignRight: false },  
     { id: 'TotalAmount', label: 'Total Amount', alignRight: false },
     { id: 'DateOfOrder', label: 'Date Of Order', alignRight: false },
     { id: 'LastDate', label: 'Last Date', alignRight: false },
@@ -200,13 +200,16 @@ export default function Transactions() {
                 />
                 <TableBody>
                   {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    if (parseInt(localStorage.getItem('ROLE'),10) === 2)
+                    if (parseInt(localStorage.getItem('ROLE'),10) === 2 && flag === 0)
                     {
-                      row.ClientName = row.Buyer.Company.Name;
+                      const a = row.Name
+                      row.Name = row.Buyer.Company.Name;
+                      row.ClientName = a;
+                      setFlag(1);
+                      
                     }
                     const { Id,Name, TotalAmount,  DateOfOrder, LastDate, InvoiceStatus,ClientName} = row;
                     const isItemSelected = selected.indexOf(Name) !== -1;
-
                     return (
                       <TableRow
                         hover
@@ -219,6 +222,8 @@ export default function Transactions() {
                         <TableCell padding="checkbox">
                         {/* <Checkbox checked={isItemSelected} onChange={(event) => handleClick(event, Name)} /> */}
                         </TableCell>
+                        
+                        <TableCell align="left">{Name}</TableCell>
                         {(() => {
                           if (parseInt(localStorage.getItem('ROLE'),10) === 2) {
                             return (  
@@ -226,7 +231,6 @@ export default function Transactions() {
                             )
                           }
                         })()}
-                        <TableCell align="left">{Name}</TableCell>
                         <TableCell align="left">{TotalAmount}</TableCell>
                         <TableCell align="left">{DateOfOrder}</TableCell>
                         <TableCell align="left">{LastDate}</TableCell>                     
