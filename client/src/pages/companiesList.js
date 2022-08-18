@@ -109,14 +109,14 @@ export default function CompaniesList() {
     if (parseInt(localStorage.getItem('ROLE'),10) === 1)
     {
       setTitle("Home")
-      Urlo = "http://localhost:5000/company/h";
+      Urlo = "https://crm-team3.herokuapp.com/company/h";
       setNavigation("/admin/addcompany"); 
     }
     else
     {
       const CompanyId = localStorage.getItem('ID');
       setTitle("Companies")
-      Urlo = `http://localhost:5000/company/c/${CompanyId}`;
+      Urlo = `https://crm-team3.herokuapp.com/company/c/${CompanyId}`;
       setNavigation("/host/addcompany"); 
     }
     try {

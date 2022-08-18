@@ -92,7 +92,7 @@ export default function AdminHome() {
     const getData = async () => {
         try {
             const companyId = parseInt(localStorage.getItem('ID'),10);
-           const response = await axios.get(`http://localhost:5000/product/${companyId}`)
+           const response = await axios.get(`https://crm-team3.herokuapp.com/product/${companyId}`)
               console.log("Data recieved");
               console.log(response.data);
               setProduct(response.data);

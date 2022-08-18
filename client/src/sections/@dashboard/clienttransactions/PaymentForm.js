@@ -54,7 +54,7 @@ export default function PaymentForm({ ID }) {
 
   const updateData = async (body) => {
     try {
-        await axios.patch(`http://localhost:5000/order/${ID}`, body)
+        await axios.patch(`https://crm-team3.herokuapp.com/order/${ID}`, body)
             .then((response) => {
                 console.log("Data recieved");
                 console.log(response.data);

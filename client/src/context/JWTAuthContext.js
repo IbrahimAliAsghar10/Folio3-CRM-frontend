@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (body) => {
         try {
-            await axios.post("http://localhost:5000/auth/login", body)
+            await axios.post("https://crm-team3.herokuapp.com/auth/login", body)
               .then((response) => {
                 console.log("Data recieved");
                 const results = response.data; 
