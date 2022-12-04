@@ -102,7 +102,7 @@ export default function Orderline({ ID }) {
   }, []);
   const getData = async () => {
     try {
-      const response = await axios.get(`https://crm-team3.herokuapp.com/order/${ID}`)
+      const response = await axios.get(`https://crm-backend-project.herokuapp.com/order/${ID}`)
       console.log("Data recieved");
       console.log(response.data);
       setTotalAmount(response.data.TotalAmount);

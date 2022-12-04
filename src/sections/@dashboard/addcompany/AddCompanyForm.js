@@ -76,7 +76,7 @@ export default function AddCompanyForm() {
         axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
         axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
         try {
-            await axios.post("https://crm-team3.herokuapp.com/user/addcompany", body)
+            await axios.post("https://crm-backend-project.herokuapp.com/user/addcompany", body)
                 .then((response) => {
                     console.log("Data recieved");
                     console.log(response.data);

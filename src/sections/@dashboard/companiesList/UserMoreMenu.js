@@ -25,7 +25,7 @@ export default function UserMoreMenu({ ID, action }) {
     }
     
     try {
-      axios.patch(`https://crm-team3.herokuapp.com/company/${ID}`,updateIsDelete)
+      axios.patch(`https://crm-backend-project.herokuapp.com/company/${ID}`,updateIsDelete)
         .then((response) => {
           console.log("Data recieved");
           console.log(response.data);

@@ -68,7 +68,7 @@ export default function Dashboard() {
             const CompanyId = localStorage.getItem('ID');
             if (parseInt(localStorage.getItem('ROLE'),10) === 2)
             {
-                URL = `https://crm-team3.herokuapp.com/company/hd/${CompanyId}`;
+                URL = `https://crm-backend-project.herokuapp.com/company/hd/${CompanyId}`;
                 setTitle('Host Dashboard')
                 setWidget1Title('Total Sale');
                 setWidget2Title('Clients')
@@ -78,7 +78,7 @@ export default function Dashboard() {
             }
             else if (parseInt(localStorage.getItem('ROLE'),10) === 3)
             {
-                URL = `https://crm-team3.herokuapp.com/company/cd/${CompanyId}`;
+                URL = `https://crm-backend-project.herokuapp.com/company/cd/${CompanyId}`;
                 setTitle('Client Dashboard')
                 setWidget1Title('Total Purchase');
                 setWidget2Title('Payable Orders')

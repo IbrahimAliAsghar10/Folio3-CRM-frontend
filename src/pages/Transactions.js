@@ -114,13 +114,13 @@ export default function Transactions() {
     if (parseInt(localStorage.getItem('ROLE'),10) === 2)
     {
       setTitle("Recievables")
-      Urlo = `https://crm-team3.herokuapp.com/order/h/${CompanyId}`;
+      Urlo = `https://crm-backend-project.herokuapp.com/order/h/${CompanyId}`;
       setTableHead(TABLE_HEADHOST)
     }
     if (parseInt(localStorage.getItem('ROLE'),10) === 3)
     {
       setTitle("Transactions")
-      Urlo = `https://crm-team3.herokuapp.com/order/c/${CompanyId}`;
+      Urlo = `https://crm-backend-project.herokuapp.com/order/c/${CompanyId}`;
       setTableHead(TABLE_HEADCLIENT)
     }
     try {
